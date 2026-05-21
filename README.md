@@ -192,16 +192,16 @@ The project is intended as a study on algorithmic reverberation, psychoacoustic 
 - Multichannel / spatial audio extension
 - Adaptive parameter control
 
-## Author
-
-**Giovanni Maria Vona**  
-Sound Engineering student  
-Conservatorio Statale di Musica “O. Respighi” — Latina  
-DSP · Sound Design · Electroacoustic Music · Audio Programming
-
 ## License
 
 Code, Max/MSP patches, RNBO patches and DSP files are released under the MIT License.  
 Documentation, images and audio examples are released under CC BY-NC 4.0.  
 
 See `LICENSE.md` for details.
+
+## Author
+
+**Giovanni Maria Vona**  
+Sound Engineering student  
+Conservatorio Statale di Musica “O. Respighi” — Latina  
+DSP · Sound Design · Electroacoustic Music · Audio Programming
