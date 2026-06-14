@@ -45,6 +45,8 @@ Dry/Wet Mix
 - Deterministic DSP structure
 - Real-time parameter control in Max/MSP
 - RNBO-based implementation
+- C++ source export generated from the RNBO implementation
+- VST3 / AU plugin builds distributed through GitHub Releases
 
 ## Early Reflections
 
@@ -151,14 +153,22 @@ The main exposed parameters include:
 ```text
 scatola-di-metallo/
 ├── README.md
+├── LICENSE
 ├── max/
 │   └── scatola_di_metallo.maxpat
 ├── rnbo/
 │   └── Scatola_di_metallo_V2.rnbopat
-├── docs/
-│   └── SdM-Presentazione.pdf
-│   └── SdM-Tesina.pdf
-└── LICENSE
+├── cpp/
+│   ├── README.md
+│   ├── dependencies.json
+│   ├── description.json
+│   ├── presets.json
+│   ├── rnbo_source.cpp
+│   └── rnbo/
+│       └── [RNBO C++ source export and support files]
+└── docs/
+    ├── SdM-Presentazione.pdf
+    └── SdM-Tesina.pdf
 ```
 
 ## Requirements
@@ -170,6 +180,37 @@ To open and edit the project:
 
 The project was developed and tested in a Max/MSP + RNBO environment.
 
+## C++ Source Export
+
+The repository includes a C++ source export generated from the RNBO implementation of the processor.
+
+```text
+cpp/rnbo_export/
+```
+
+This export is provided as a technical reference and as a basis for future development outside the Max/MSP environment.
+
+The C++ source export documents how the RNBO patch can be translated into a lower-level audio programming context. It may require additional configuration depending on the target compiler, operating system, build system or plugin framework.
+
+The Max/MSP and RNBO patch files remain the primary editable version of the project.
+
+## Plugin Builds
+
+Compiled plugin builds are distributed through the repository Releases section rather than being committed directly to the main source tree.
+
+Available plugin formats may include:
+
+```text
+VST3
+AU
+```
+
+The plugin builds are provided as release assets in order to keep the repository lightweight and avoid storing platform-specific binary files directly in the source tree.
+
+Download the latest plugin builds from:
+
+[Scatola di Metallo — Releases](https://github.com/vonagiovannimaria/scatola-di-metallo/releases)
+
 ## Usage
 
 1. Open the main Max/MSP patch located in the `max/` folder.
@@ -177,18 +218,34 @@ The project was developed and tested in a Max/MSP + RNBO environment.
 3. Send an audio signal through the processor.
 4. Adjust the exposed parameters to control the spatial response, decay, early reflection model and stereo image.
 
+### Using the plugin builds
+
+Compiled VST3 / AU builds are distributed through GitHub Releases.
+
+1. Open the repository Releases section.
+2. Download the plugin build for your operating system and plugin format.
+3. Install the plugin according to the requirements of your DAW.
+4. Load the plugin on an audio track and test it with an appropriate input signal.
+
+The plugin builds are derived from the RNBO implementation of the processor. The Max/MSP and RNBO files remain the primary editable version of the project.
+
 ## Project Status
 
 Academic prototype / sound design tool.
 
 The project is intended as a study on algorithmic reverberation, psychoacoustic control of spatial response and deterministic DSP structures for real-time audio processing.
 
+Compiled VST3 / AU plugin builds are distributed through GitHub Releases.
+
 ## Possible Future Developments
 
 - Additional FIR early reflection models
 - Expanded stereo decorrelation strategies
 - Controlled nonlinearities inside the feedback network
-- Standalone or plugin export
+- refinement of the RNBO-generated C++ source export
+- further testing of VST3 / AU plugin builds
+- standalone application build
+- extended documentation for plugin installation and usage
 - Multichannel / spatial audio extension
 - Adaptive parameter control
 

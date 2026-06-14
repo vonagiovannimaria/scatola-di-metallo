@@ -1,0 +1,31 @@
+[
+  {
+    "name": "untitled",
+    "preset": {
+      "Correlation": {
+        "value": 35
+      },
+      "Decay": {
+        "value": 85
+      },
+      "ER_Mode": {
+        "value": 0
+      },
+      "IR_Type": {
+        "value": 0
+      },
+      "Mix": {
+        "value": 0
+      },
+      "Predelay(ms)": {
+        "value": 8
+      },
+      "Side_boost(dB)": {
+        "value": 0
+      },
+      "Size": {
+        "value": 35
+      }
+    }
+  }
+]
